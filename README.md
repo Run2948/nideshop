@@ -6,12 +6,15 @@
 + 服务端api基于Ｎode.js+ThinkJS+MySQL
 + 计划添加基于Vue.js的后台管理系统、PC版、Ｗap版
 
-本项目需要配合微信小程序端使用，GitHub: [https://github.com/tumobi/nideshop-mini-program](https://github.com/tumobi/nideshop-mini-program)
+
+**注意：由于原作者不再维护，我们 fork 了次仓库继续添砖加瓦，当前版本功能还未完善，商用需谨慎。**
+
+本项目需要配合微信小程序端使用，GitHub: [https://github.com/Run2948/nideshop-mini-program](https://github.com/Run2948/nideshop-mini-program)
 
 ### 本地开发环境配置
 + 克隆项目到本地
 ```
-git clone https://github.com/tumobi/nideshop
+git clone https://github.com/Run2948/nideshop
 ```
 + 创建数据库nideshop并导入项目根目录下的nideshop.sql
 ```
@@ -61,10 +64,8 @@ npm start
 访问http://127.0.0.1:8360/
 
 ### 线上部署
-[云服务器ECS-云主机优惠-2折上云](https://promotion.aliyun.com/ntms/act/qwbk.html?userCode=3grpysgf)
 
 [在阿里云（CentOS 7）上部署文档](https://www.nideshop.com/documents/nideshop-manual/deployment-centos)
-
 
 ### 微信小程序客户端截图
 
@@ -95,6 +96,6 @@ npm start
 ....
 
 ### 交流
-喜欢别忘了 Star，有问题可通过微信、公众号、QQ 群联系我，谢谢您的关注。
+喜欢别忘了 Star，有问题可通过 QQ群：1040822138 联系我们，谢谢您的关注。
 
-![联系方式](http://nideshop-static.childsay.com/nideshop-qrcode.png)
+[点击链接加入群聊【NideShop舔砖加瓦】](https://jq.qq.com/?_wv=1027&k=biLhogLL)

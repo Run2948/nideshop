@@ -8,7 +8,7 @@ module.exports = class extends Base {
   async indexAction() {
     const page = this.get('page') || 1;
     const size = this.get('size') || 10;
-    const orderSn = this.get('orderSn') || '';
+    const orderSn = this.get('order_sn') || '';
     const consignee = this.get('consignee') || '';
 
     const model = this.model('order');

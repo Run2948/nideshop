@@ -10,6 +10,8 @@ module.exports = class extends Base {
       return this.fail(401, '用户名或密码不正确1');
     }
 
+    // console.log(think.md5(password + '' + admin.password_salt))
+
     if (think.md5(password + '' + admin.password_salt) !== admin.password) {
       return this.fail(400, '用户名或密码不正确2');
     }

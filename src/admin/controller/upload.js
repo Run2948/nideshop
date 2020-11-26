@@ -8,7 +8,14 @@ module.exports = class extends Base {
       return this.fail('保存失败');
     }
     const that = this;
-    const filename = '/static/upload/brand/' + think.uuid(32) + '.jpg';
+    // const filename = '/static/upload/brand/' + think.uuid(32) + '.jpg';
+
+    const basepath = think.ROOT_PATH  + '/www';
+    const filepath = '/static/upload/brand/';
+    think.mkdir(basepath + filepath);
+    
+    const filename = filepath + think.uuid(32) + '.jpg';
+
     const is = fs.createReadStream(brandFile.path);
     const os = fs.createWriteStream(think.ROOT_PATH + '/www' + filename);
     is.pipe(os);
@@ -21,14 +28,21 @@ module.exports = class extends Base {
 
   async brandNewPicAction() {
     const brandFile = this.file('brand_new_pic');
+    console.log(brandFile)
     if (think.isEmpty(brandFile)) {
       return this.fail('保存失败');
     }
     const that = this;
-    const filename = '/static/upload/brand/' + think.uuid(32) + '.jpg';
+   // const filename = '/static/upload/brand/' + think.uuid(32) + '.jpg';
+
+   const basepath = think.ROOT_PATH  + '/www';
+   const filepath = '/static/upload/brand/';
+   think.mkdir(basepath + filepath);
+   
+   const filename = filepath + think.uuid(32) + '.jpg';
 
     const is = fs.createReadStream(brandFile.path);
-    const os = fs.createWriteStream(think.ROOT_PATH + '/www' + filename);
+    const os = fs.createWriteStream(basepath + filename);
     is.pipe(os);
 
     return that.success({
@@ -43,7 +57,13 @@ module.exports = class extends Base {
       return this.fail('保存失败');
     }
     const that = this;
-    const filename = '/static/upload/category/' + think.uuid(32) + '.jpg';
+    // const filename = '/static/upload/category/' + think.uuid(32) + '.jpg';
+
+    const basepath = think.ROOT_PATH  + '/www';
+    const filepath = '/static/upload/category/';
+    think.mkdir(basepath + filepath);
+    
+    const filename = filepath + think.uuid(32) + '.jpg';
 
     const is = fs.createReadStream(imageFile.path);
     const os = fs.createWriteStream(think.ROOT_PATH + '/www' + filename);
@@ -61,7 +81,13 @@ module.exports = class extends Base {
       return this.fail('保存失败');
     }
     const that = this;
-    const filename = '/static/upload/topic/' + think.uuid(32) + '.jpg';
+    // const filename = '/static/upload/topic/' + think.uuid(32) + '.jpg';
+
+    const basepath = think.ROOT_PATH  + '/www';
+    const filepath = '/static/upload/topic/';
+    think.mkdir(basepath + filepath);
+    
+    const filename = filepath + think.uuid(32) + '.jpg';
 
     const is = fs.createReadStream(imageFile.path);
     const os = fs.createWriteStream(think.ROOT_PATH + '/www' + filename);
